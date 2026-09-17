@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SunTech GmbH (Werk Teisnach) - Erasmus+ BIP Team 1 Strategy: International Talent Integration & European Solar Market Scaling. Addressing Bavarian demographic challenges with global high-tech engineering.">
+  <meta name="keywords" content="SunTech, Teisnach, Solar Inverters, Erasmus+ BIP, International Talent, Bavarian Industry, TH Deggendorf, DIT, ESF+, Arbeitsmarktfonds Bayern">
+  <meta name="author" content="Erasmus+ BIP Team 1: Amalia, Karol, Kate, Mario, Onja">
+  <title>SunTech GmbH | Werk Teisnach - Global Talent & Solar Scaling Strategy</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: {
+              800: '#0f2347',
+              900: '#0A192F',
+              950: '#050c18',
+            },
+            solar: {
+              400: '#fbbf24',
+              500: '#F59E0B',
+              600: '#d97706',
+            },
+            emerald: {
+              500: '#10B981',
+              600: '#059669',
+            },
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-solar-500 selection:text-white">
+
+  <!-- ==========================================================================
+       HEADER & NAVIGATION BAR
+       ========================================================================== -->
+  <header class="sticky top-0 z-50 bg-navy-900/90 backdrop-blur-md border-b border-slate-800 shadow-xl">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Brand Logo -->
+        <a href="#hero" class="flex items-center gap-3 group">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-solar-500 to-amber-600 flex items-center justify-center text-navy-900 font-extrabold text-xl shadow-lg group-hover:scale-105 transition-transform">
+            ⚡
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="font-extrabold text-xl text-white tracking-tight">SunTech <span class="text-solar-400">GmbH</span></span>
+              <span class="px-2 py-0.5 text-[10px] font-bold bg-blue-900/80 text-blue-300 rounded border border-blue-700/50">Werk Teisnach</span>
+            </div>
+            <span class="text-xs text-slate-400 font-medium block">Erasmus+ BIP Team 1 Project Strategy</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden md:flex items-center space-x-8">
+          <a href="#hero" class="nav-link text-sm font-medium text-slate-300 hover:text-solar-400 transition-colors">Home</a>
+          <a href="#about" class="nav-link text-sm font-medium text-slate-300 hover:text-solar-400 transition-colors">About Us</a>
+          <a href="#pillars" class="nav-link text-sm font-medium text-slate-300 hover:text-solar-400 transition-colors">Strategy & Pillars</a>
+          <a href="#roadmap" class="nav-link text-sm font-medium text-slate-300 hover:text-solar-400 transition-colors">What’s Next</a>
+          <a href="#research" class="nav-link text-sm font-medium text-slate-300 hover:text-solar-400 transition-colors">Research Log</a>
+          <a href="#calculator" class="nav-link text-sm font-medium text-slate-300 hover:text-solar-400 transition-colors">ROI Calculator</a>
+          <a href="#team-contact" class="nav-link text-sm font-medium text-slate-300 hover:text-solar-400 transition-colors">Team & Contact</a>
+        </nav>
+
+        <!-- CTA & Status Badge -->
+        <div class="hidden lg:flex items-center gap-4">
+          <div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-950/60 border border-emerald-500/30 text-emerald-400 text-xs font-semibold">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            BIP Strategy Active
+          </div>
+          <a href="#roadmap" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-solar-500 to-amber-600 hover:from-solar-600 hover:to-amber-700 text-navy-900 font-bold text-sm shadow-lg shadow-amber-500/20 hover:shadow-amber-500/40 transition-all">
+            Explore Roadmap
+          </a>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <div class="md:hidden">
+          <button id="mobile-menu-toggle" class="p-2 rounded-lg text-slate-300 hover:text-white hover:bg-navy-800 focus:outline-none" aria-label="Toggle Navigation Menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Drawer -->
+  <div id="mobile-menu-drawer" class="hidden fixed inset-0 z-50 bg-navy-950/95 backdrop-blur-xl flex-col p-6 space-y-6">
+    <div class="flex justify-between items-center border-b border-slate-800 pb-4">
+      <span class="font-extrabold text-lg text-white">SunTech GmbH | Werk Teisnach</span>
+      <button id="mobile-menu-close" class="p-2 text-slate-400 hover:text-white">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="flex flex-col space-y-4">
+      <a href="#hero" class="mobile-nav-link text-lg font-medium text-slate-200 hover:text-solar-400">Home</a>
+      <a href="#about" class="mobile-nav-link text-lg font-medium text-slate-200 hover:text-solar-400">About Us & Mission</a>
+      <a href="#pillars" class="mobile-nav-link text-lg font-medium text-slate-200 hover:text-solar-400">Strategy & Pillars</a>
+      <a href="#roadmap" class="mobile-nav-link text-lg font-medium text-slate-200 hover:text-solar-400">What’s Next (Roadmap)</a>
+      <a href="#research" class="mobile-nav-link text-lg font-medium text-slate-200 hover:text-solar-400">Research Log</a>
+      <a href="#calculator" class="mobile-nav-link text-lg font-medium text-slate-200 hover:text-solar-400">ROI Calculator</a>
+      <a href="#team-contact" class="mobile-nav-link text-lg font-medium text-slate-200 hover:text-solar-400">HR Team & Contact</a>
+    </div>
+    <div class="pt-4">
+      <a href="#roadmap" class="mobile-nav-link block w-full py-3 text-center rounded-xl bg-solar-500 text-navy-900 font-bold">
+        Explore Roadmap
+      </a>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       HERO SECTION
+       ========================================================================== -->
+  <section id="hero" class="relative bg-navy-900 text-white overflow-hidden py-20 lg:py-28">
+    <!-- Background Image & Grid Overlay -->
+    <div class="absolute inset-0 z-0 opacity-25">
+      <img src="assets/hero_bg.png" alt="SunTech High Tech Facility" class="w-full h-full object-cover">
+    </div>
+    <div class="absolute inset-0 z-0 bg-gradient-to-r from-navy-950 via-navy-900/90 to-navy-900/70"></div>
+
+    <!-- Glowing Background Spheres -->
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-96 h-96 bg-solar-500/15 rounded-full filter blur-3xl pointer-events-none"></div>
+    <div class="absolute bottom-10 right-10 w-80 h-80 bg-blue-500/15 rounded-full filter blur-3xl pointer-events-none"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Hero Text Content -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-800/80 border border-slate-700 text-amber-400 text-xs font-semibold uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-solar-400 animate-ping"></span>
+            Erasmus+ BIP Team 1 Project Strategy
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight">
+            Powering European Solar Infrastructure Through <span class="gradient-text-solar">Global Talent</span> & Innovation
+          </h1>
+
+          <p class="text-lg sm:text-xl text-slate-300 font-normal leading-relaxed max-w-2xl mx-auto lg:mx-0">
+            Addressing demographic challenges in Bavaria by integrating international engineering talent and scaling clean energy solutions across Europe.
+          </p>
+
+          <div class="pt-4 flex flex-wrap justify-center lg:justify-start gap-4">
+            <a href="#pillars" class="px-8 py-4 rounded-xl bg-gradient-to-r from-solar-500 to-amber-600 hover:from-solar-600 hover:to-amber-700 text-navy-900 font-extrabold text-base shadow-xl shadow-amber-500/20 hover:scale-105 transition-all">
+              View Strategy & Pillars
+            </a>
+            <a href="#roadmap" class="px-8 py-4 rounded-xl bg-slate-800/90 hover:bg-slate-700 border border-slate-700 text-white font-bold text-base hover:border-amber-400 transition-all">
+              Our 5-Year Roadmap
+            </a>
+          </div>
+
+          <!-- Location Badge -->
+          <div class="pt-6 flex items-center justify-center lg:justify-start gap-6 text-xs text-slate-400 font-medium border-t border-slate-800/80">
+            <span class="flex items-center gap-1.5">
+              <svg class="w-4 h-4 text-solar-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              Teisnach, Landkreis Regen, Bavaria
+            </span>
+            <span class="flex items-center gap-1.5">
+              <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              Solar Inverters & High-Tech
+            </span>
+          </div>
+
+        </div>
+
+        <!-- Hero Stats Cards Column -->
+        <div class="lg:col-span-5">
+          <div id="hero-stats" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4">
+            
+            <!-- Stat 1 -->
+            <div class="glass-card-dark rounded-2xl p-6 border border-slate-700/60 hover:border-solar-500/50 transition-all group">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-bold text-slate-400 uppercase tracking-widest">Current Workforce</span>
+                <span class="p-2 rounded-lg bg-blue-900/50 text-blue-400">👥</span>
+              </div>
+              <div class="text-3xl font-extrabold text-white tracking-tight">
+                <span class="stat-counter text-solar-400" data-target="500" data-suffix="">0</span> Employees
+              </div>
+              <p class="text-xs text-slate-400 mt-1">Werk Teisnach manufacturing & engineering hub</p>
+            </div>
+
+            <!-- Stat 2 -->
+            <div class="glass-card-dark rounded-2xl p-6 border border-slate-700/60 hover:border-solar-500/50 transition-all group">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-bold text-slate-400 uppercase tracking-widest">Annual Revenue & Margin</span>
+                <span class="p-2 rounded-lg bg-emerald-900/50 text-emerald-400">💶</span>
+              </div>
+              <div class="text-3xl font-extrabold text-white tracking-tight">
+                €<span class="stat-counter text-emerald-400" data-target="100" data-suffix="M">0</span> Revenue
+              </div>
+              <div class="mt-2 flex items-center justify-between text-xs border-t border-slate-800 pt-2 text-slate-300">
+                <span>EBITDA Margin: <strong class="text-emerald-400">10–15%</strong></span>
+                <span class="font-bold text-white">€10M–€15M Profit</span>
+              </div>
+            </div>
+
+            <!-- Stat 3 -->
+            <div class="glass-card-dark rounded-2xl p-6 border border-amber-500/40 bg-gradient-to-br from-navy-900 via-navy-900 to-amber-950/30">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-bold text-amber-400 uppercase tracking-widest">Target Talent Intake</span>
+                <span class="p-2 rounded-lg bg-amber-500/20 text-solar-400">🚀</span>
+              </div>
+              <div class="text-3xl font-extrabold text-white tracking-tight">
+                <span class="stat-counter text-solar-400" data-target="30" data-suffix=" / Year">0</span>
+              </div>
+              <p class="text-xs text-slate-300 mt-1">90 Total High-Tech International Hires over 3 Years</p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       ABOUT US / CORE Q&A: THE CHALLENGE & SOLUTION
+       ========================================================================== -->
+  <section id="about" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <span class="px-3 py-1 bg-amber-100 text-amber-800 text-xs font-extrabold uppercase tracking-widest rounded-full">
+          Problem Statement & Mission
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900 tracking-tight">
+          Overcoming Bavarian Demographics Through Global Talent
+        </h2>
+        <p class="text-slate-600 text-base sm:text-lg">
+          Landkreis Regen faces a severe structural shortage of local technical workers due to demographic aging. SunTech Werk Teisnach is transforming this challenge into an opportunity by creating an international engineering hub.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left: Image & Teisnach Context -->
+        <div class="lg:col-span-5 space-y-6">
+          <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-200 group">
+            <img src="assets/facility.png" alt="SunTech Teisnach Production Hub" class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-navy-950/80 via-transparent to-transparent"></div>
+            <div class="absolute bottom-4 left-4 right-4 text-white">
+              <span class="px-2.5 py-1 bg-solar-500 text-navy-900 text-xs font-bold rounded mb-1 inline-block">Werk Teisnach Hub</span>
+              <p class="text-sm font-medium text-slate-200">German Engineering Excellence in Bavaria</p>
+            </div>
+          </div>
+
+          <!-- Key Financial Fallback Shield Card -->
+          <div class="bg-slate-50 rounded-xl p-6 border border-slate-200 space-y-3">
+            <div class="flex items-center gap-3">
+              <div class="p-2 bg-emerald-100 text-emerald-800 rounded-lg">🛡️</div>
+              <h4 class="font-bold text-navy-900 text-base">Financial Sustainability Shield</h4>
+            </div>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              With <strong>€10M–€15M actual annual profit</strong> (10–15% EBITDA), SunTech can re-invest <strong>€1.5M–€2M/year</strong> of corporate profits as a secondary fallback if public grant disbursements face administrative delays.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right: Core Q&A Solutions Grid -->
+        <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
+          
+          <!-- Card 1 -->
+          <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200 hover:border-amber-400 hover:shadow-lg transition-all space-y-3">
+            <div class="flex items-center gap-3">
+              <span class="w-10 h-10 rounded-xl bg-blue-900 text-white flex items-center justify-center font-bold text-lg">01</span>
+              <h3 class="font-bold text-navy-900 text-lg">Shop-Floor Resistance</h3>
+            </div>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              <strong>Solution:</strong> Paid "Technical Mentors" with salary upgrades for veteran staff. German technicians are compensated for guiding international recruits, turning friction into mutual incentive.
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200 hover:border-amber-400 hover:shadow-lg transition-all space-y-3">
+            <div class="flex items-center gap-3">
+              <span class="w-10 h-10 rounded-xl bg-amber-500 text-navy-900 flex items-center justify-center font-bold text-lg">02</span>
+              <h3 class="font-bold text-navy-900 text-lg">Rural Support Deficit</h3>
+            </div>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              <strong>Solution:</strong> Company-provided housing stipends, daycare access guarantees in Landkreis Regen, and spousal employment placement assistance to ensure family stability.
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200 hover:border-amber-400 hover:shadow-lg transition-all space-y-3">
+            <div class="flex items-center gap-3">
+              <span class="w-10 h-10 rounded-xl bg-emerald-600 text-white flex items-center justify-center font-bold text-lg">03</span>
+              <h3 class="font-bold text-navy-900 text-lg">Public Funding Strategy</h3>
+            </div>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              <strong>Solution:</strong> Primary funding secured via EU public programs (ESF+) and Bavarian grants (Arbeitsmarktfonds Bayern) to co-finance training, mentorship, and bilingual integration.
+            </p>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200 hover:border-amber-400 hover:shadow-lg transition-all space-y-3">
+            <div class="flex items-center gap-3">
+              <span class="w-10 h-10 rounded-xl bg-sky-600 text-white flex items-center justify-center font-bold text-lg">04</span>
+              <h3 class="font-bold text-navy-900 text-lg">Target Beneficiaries</h3>
+            </div>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              <strong>Triple Win:</strong> Legacy workers gain burnout prevention; international recruits gain career stability; Teisnach secures long-term economic vitality.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       THE FOUR OPERATIONAL PILLARS (INTERACTIVE CARDS & TABS)
+       ========================================================================== -->
+  <section id="pillars" class="py-20 bg-slate-100/80 border-t border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-12 space-y-4">
+        <span class="px-3 py-1 bg-navy-900 text-amber-400 text-xs font-extrabold uppercase tracking-widest rounded-full">
+          Core Operational Blueprint
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900 tracking-tight">
+          The Four Strategic Pillars
+        </h2>
+        <p class="text-slate-600 text-base">
+          Click through each pillar below to explore detailed operational mechanisms, funding models, mentorship structures, and growth metrics.
+        </p>
+      </div>
+
+      <!-- Tab Buttons Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+        <button data-pillar="pillar1" class="pillar-tab-btn active p-5 rounded-xl border border-amber-500 bg-navy-900 text-white text-left transition-all shadow-lg">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-bold uppercase tracking-wider opacity-75">Pillar 01</span>
+            <span class="text-lg">🎓</span>
+          </div>
+          <h3 class="font-extrabold text-base">Finding Talent</h3>
+          <p class="text-xs text-slate-300 mt-1 line-clamp-1">TH Deggendorf (DIT) & Global Pipeline</p>
+        </button>
+
+        <button data-pillar="pillar2" class="pillar-tab-btn p-5 rounded-xl border border-slate-200 bg-white text-slate-700 hover:border-amber-400 text-left transition-all">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Pillar 02</span>
+            <span class="text-lg">💶</span>
+          </div>
+          <h3 class="font-extrabold text-base">Integration & Funding</h3>
+          <p class="text-xs text-slate-500 mt-1 line-clamp-1">ESF+ & Arbeitsmarktfonds Bayern</p>
+        </button>
+
+        <button data-pillar="pillar3" class="pillar-tab-btn p-5 rounded-xl border border-slate-200 bg-white text-slate-700 hover:border-amber-400 text-left transition-all">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Pillar 03</span>
+            <span class="text-lg">🤝</span>
+          </div>
+          <h3 class="font-extrabold text-base">Communication</h3>
+          <p class="text-xs text-slate-500 mt-1 line-clamp-1">Paid Tandem Mentorship & Instructions</p>
+        </button>
+
+        <button data-pillar="pillar4" class="pillar-tab-btn p-5 rounded-xl border border-slate-200 bg-white text-slate-700 hover:border-amber-400 text-left transition-all">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Pillar 04</span>
+            <span class="text-lg">🌟</span>
+          </div>
+          <h3 class="font-extrabold text-base">Employer Brand</h3>
+          <p class="text-xs text-slate-500 mt-1 line-clamp-1">Certification & EU Market Scale</p>
+        </button>
+      </div>
+
+      <!-- Active Pillar Detail Container (Rendered by JS) -->
+      <div id="pillar-detail-content" class="min-h-[380px]">
+        <!-- Dynamic content injected here -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       WHAT'S NEXT: 5-YEAR GROWTH ROADMAP (INTERACTIVE TIMELINE)
+       ========================================================================== -->
+  <section id="roadmap" class="py-20 bg-navy-900 text-white relative overflow-hidden">
+    
+    <div class="absolute inset-0 z-0 opacity-10 bg-[radial-gradient(#F59E0B_1px,transparent_1px)] [background-size:24px_24px]"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <span class="px-3 py-1 bg-amber-500/20 text-amber-400 text-xs font-extrabold uppercase tracking-widest rounded-full border border-amber-500/30">
+          Crucial Feature
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">
+          What’s Next: <span class="gradient-text-solar">5-Year Growth Roadmap</span>
+        </h2>
+        <p class="text-slate-300 text-base sm:text-lg">
+          Select any phase below to inspect target milestones, funding mechanisms, recruitment cohorts, and European market scaling goals.
+        </p>
+      </div>
+
+      <!-- Roadmap Year Selector Nodes -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+        
+        <button data-stage="y1" class="roadmap-stage-node p-5 rounded-2xl bg-navy-900 border border-amber-400 ring-4 ring-amber-400 text-amber-400 font-bold text-center transition-all scale-105 shadow-xl">
+          <span class="text-xs uppercase tracking-widest block opacity-75">Phase 1</span>
+          <span class="text-2xl font-extrabold block my-1">Year 1</span>
+          <span class="text-xs font-normal text-slate-300 block">Setup & Funding Filings</span>
+        </button>
+
+        <button data-stage="y2" class="roadmap-stage-node p-5 rounded-2xl bg-white text-navy-900 border border-slate-700 hover:border-amber-400 font-bold text-center transition-all">
+          <span class="text-xs uppercase tracking-widest block text-slate-500">Phase 2</span>
+          <span class="text-2xl font-extrabold block my-1">Year 2</span>
+          <span class="text-xs font-normal text-slate-600 block">Cohort 1 (30 Hires) & AT/CZ Export</span>
+        </button>
+
+        <button data-stage="y3" class="roadmap-stage-node p-5 rounded-2xl bg-white text-navy-900 border border-slate-700 hover:border-amber-400 font-bold text-center transition-all">
+          <span class="text-xs uppercase tracking-widest block text-slate-500">Phase 3</span>
+          <span class="text-2xl font-extrabold block my-1">Year 3</span>
+          <span class="text-xs font-normal text-slate-600 block">Cohort 2 & EU Grid Code</span>
+        </button>
+
+        <button data-stage="y45" class="roadmap-stage-node p-5 rounded-2xl bg-white text-navy-900 border border-slate-700 hover:border-amber-400 font-bold text-center transition-all">
+          <span class="text-xs uppercase tracking-widest block text-slate-500">Phase 4</span>
+          <span class="text-2xl font-extrabold block my-1">Years 4–5</span>
+          <span class="text-xs font-normal text-slate-600 block">90 Retained & EU Market Scale</span>
+        </button>
+
+      </div>
+
+      <!-- Dynamic Roadmap Details Container (Rendered by JS) -->
+      <div id="roadmap-stage-details" class="min-h-[340px]">
+        <!-- Injected by app.js -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       ACADEMIC, FINANCIAL & FUNDING RESEARCH LOG
+       ========================================================================== -->
+  <section id="research" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-6 mb-12">
+        <div>
+          <span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-extrabold uppercase tracking-widest rounded-full">
+            Verified Evidence Base
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900 tracking-tight mt-2">
+            Academic, Financial & Funding Research Log
+          </h2>
+          <p class="text-slate-600 text-base max-w-2xl mt-2">
+            Grounding our strategy in official German statistical data, university enrollment metrics, EU public funding directives, and Fraunhofer market forecasts.
+          </p>
+        </div>
+
+        <!-- Live Search Input -->
+        <div class="w-full lg:w-72">
+          <label for="research-search" class="sr-only">Search Research</label>
+          <div class="relative">
+            <input type="text" id="research-search" placeholder="Search sources, topics..." class="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-300 focus:border-amber-500 focus:ring-2 focus:ring-amber-200 text-sm font-medium">
+            <svg class="w-5 h-5 text-slate-400 absolute left-3 top-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category Filters -->
+      <div class="flex flex-wrap gap-2 mb-6">
+        <button data-filter="all" class="research-filter-btn px-4 py-2 rounded-lg text-xs font-bold bg-navy-900 text-amber-400 transition-all">All Sources</button>
+        <button data-filter="demographics" class="research-filter-btn px-4 py-2 rounded-lg text-xs font-bold bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 transition-all">Demographics (Destatis)</button>
+        <button data-filter="university" class="research-filter-btn px-4 py-2 rounded-lg text-xs font-bold bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 transition-all">University (DIT)</button>
+        <button data-filter="grants" class="research-filter-btn px-4 py-2 rounded-lg text-xs font-bold bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 transition-all">Public Grants (ESF+)</button>
+        <button data-filter="market" class="research-filter-btn px-4 py-2 rounded-lg text-xs font-bold bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 transition-all">Solar Market (Fraunhofer)</button>
+      </div>
+
+      <!-- Research Log Table Container -->
+      <div class="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="bg-navy-900 text-slate-300 text-xs font-bold uppercase tracking-wider border-b border-navy-800">
+                <th class="py-4 px-4">Document / Source Name</th>
+                <th class="py-4 px-4">Authoring Institution</th>
+                <th class="py-4 px-4">Category</th>
+                <th class="py-4 px-4">Strategic Relevance to SunTech</th>
+                <th class="py-4 px-4 text-right">Action</th>
+              </tr>
+            </thead>
+            <tbody id="research-table-body">
+              <!-- Rendered via app.js -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Research Modal Viewer -->
+  <div id="research-modal" class="hidden fixed inset-0 z-50 bg-navy-950/80 backdrop-blur-sm justify-center items-center p-4">
+    <div class="bg-white rounded-2xl max-w-2xl w-full p-8 border border-slate-200 shadow-2xl relative animate-fadeIn space-y-6">
+      <div class="flex justify-between items-start border-b border-slate-100 pb-4">
+        <div>
+          <span class="px-2.5 py-1 bg-amber-100 text-amber-900 text-xs font-bold rounded">Academic Research Citation</span>
+          <h3 id="modal-title" class="text-xl font-bold text-navy-900 mt-2">Document Title</h3>
+          <p id="modal-author" class="text-xs text-slate-500 font-medium"></p>
+        </div>
+        <button id="close-modal-btn" class="p-2 text-slate-400 hover:text-navy-900 rounded-lg">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+
+      <div class="space-y-4">
+        <div>
+          <h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest">Exact Citation Excerpt</h4>
+          <p id="modal-citation" class="mt-1 text-slate-800 italic bg-amber-50/80 p-4 rounded-xl border border-amber-200 text-sm leading-relaxed"></p>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest">Strategic Relevance for Werk Teisnach</h4>
+          <p id="modal-relevance" class="mt-1 text-slate-600 text-sm leading-relaxed"></p>
+        </div>
+      </div>
+
+      <div class="pt-4 border-t border-slate-100 flex justify-end">
+        <button onclick="document.getElementById('close-modal-btn').click()" class="px-5 py-2.5 rounded-xl bg-navy-900 text-amber-400 font-bold text-xs hover:bg-navy-800">
+          Close Window
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       INTERACTIVE TALENT & FINANCIAL ROI CALCULATOR
+       ========================================================================== -->
+  <section id="calculator" class="py-20 bg-slate-100/90 border-t border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12 space-y-4">
+        <span class="px-3 py-1 bg-emerald-100 text-emerald-800 text-xs font-extrabold uppercase tracking-widest rounded-full">
+          Financial & Impact Visualizer
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900 tracking-tight">
+          Talent Intake & Economic ROI Calculator
+        </h2>
+        <p class="text-slate-600 text-base">
+          Adjust the parameters below to see real-time projections for public grant savings, shop-floor mentor bonus pools, and annual EBITDA impact.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-white rounded-3xl p-8 border border-slate-200 shadow-xl">
+        
+        <!-- Controls Column -->
+        <div class="lg:col-span-6 space-y-6">
+          
+          <!-- Control 1 -->
+          <div class="space-y-2">
+            <div class="flex justify-between items-center text-sm font-bold text-navy-900">
+              <label for="calc-hires">Annual International Hires</label>
+              <span id="calc-hires-val" class="px-3 py-1 bg-amber-100 text-amber-900 rounded-lg text-xs font-extrabold">30 Hires / Yr</span>
+            </div>
+            <input type="range" id="calc-hires" min="10" max="60" value="30" step="5" class="w-full accent-amber-500 cursor-pointer">
+            <div class="flex justify-between text-[11px] text-slate-400 font-medium">
+              <span>10 Hires</span>
+              <span>30 Hires (Base Plan)</span>
+              <span>60 Hires</span>
+            </div>
+          </div>
+
+          <!-- Control 2 -->
+          <div class="space-y-2">
+            <div class="flex justify-between items-center text-sm font-bold text-navy-900">
+              <label for="calc-funding">Public EU Grant Co-Funding % (ESF+ / Bavaria)</label>
+              <span id="calc-funding-val" class="px-3 py-1 bg-blue-100 text-blue-900 rounded-lg text-xs font-extrabold">70% EU Co-Funding</span>
+            </div>
+            <input type="range" id="calc-funding" min="40" max="90" value="70" step="5" class="w-full accent-blue-600 cursor-pointer">
+            <div class="flex justify-between text-[11px] text-slate-400 font-medium">
+              <span>40% Subsidy</span>
+              <span>70% Benchmark</span>
+              <span>90% Max Grant</span>
+            </div>
+          </div>
+
+          <!-- Control 3 -->
+          <div class="space-y-2">
+            <div class="flex justify-between items-center text-sm font-bold text-navy-900">
+              <label for="calc-export">European Solar Export Annual Growth %</label>
+              <span id="calc-export-val" class="px-3 py-1 bg-emerald-100 text-emerald-900 rounded-lg text-xs font-extrabold">+25% Annual Growth</span>
+            </div>
+            <input type="range" id="calc-export" min="5" max="50" value="25" step="5" class="w-full accent-emerald-500 cursor-pointer">
+            <div class="flex justify-between text-[11px] text-slate-400 font-medium">
+              <span>+5% Baseline</span>
+              <span>+25% Target</span>
+              <span>+50% High Scale</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Calculated Outputs Column -->
+        <div class="lg:col-span-6 bg-navy-900 text-white rounded-2xl p-8 space-y-6 shadow-2xl relative overflow-hidden">
+          <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-solar-500/10 rounded-full blur-2xl"></div>
+
+          <h3 class="text-lg font-extrabold text-amber-400 border-b border-navy-800 pb-3 uppercase tracking-wider text-xs">
+            Calculated 3-Year Strategic Return
+          </h3>
+
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            
+            <div class="p-4 bg-navy-800/80 rounded-xl border border-slate-700/60">
+              <span class="text-[11px] text-slate-400 font-semibold block uppercase">Grant Subsidy Saved</span>
+              <span id="calc-result-grant" class="text-2xl font-extrabold text-white mt-1 block">€0.95M</span>
+              <span class="text-[10px] text-emerald-400 font-medium mt-1 block">ESF+ & Bavarian Grants</span>
+            </div>
+
+            <div class="p-4 bg-navy-800/80 rounded-xl border border-slate-700/60">
+              <span class="text-[11px] text-slate-400 font-semibold block uppercase">Mentor Bonus Pool</span>
+              <span id="calc-result-mentor" class="text-2xl font-extrabold text-solar-400 mt-1 block">€170k</span>
+              <span class="text-[10px] text-slate-300 font-medium mt-1 block">Paid to Legacy Staff</span>
+            </div>
+
+            <div class="p-4 bg-navy-800/80 rounded-xl border border-slate-700/60">
+              <span class="text-[11px] text-slate-400 font-semibold block uppercase">Projected Annual EBITDA</span>
+              <span id="calc-result-ebitda" class="text-2xl font-extrabold text-emerald-400 mt-1 block">€15.6M / Year</span>
+              <span class="text-[10px] text-slate-300 font-medium mt-1 block">Up from €12.5M Base</span>
+            </div>
+
+          </div>
+
+          <p class="text-xs text-slate-400 leading-relaxed pt-2 border-t border-navy-800">
+            *Estimates calculated using SunTech's €100M revenue base, €15k average integration cost per engineer, and public funding models from ESF+ and Arbeitsmarktfonds Bayern.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       TEAM & CONTACT SECTION (ERASMUS+ BIP TEAM 1)
+       ========================================================================== -->
+  <section id="team-contact" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Team Showcase Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <span class="px-3 py-1 bg-amber-100 text-amber-900 text-xs font-extrabold uppercase tracking-widest rounded-full">
+          Erasmus+ BIP Team 1 Taskforce
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900 tracking-tight">
+          HR & International Integration Department
+        </h2>
+        <p class="text-slate-600 text-base">
+          Our specialized team leading the talent acquisition, public grant management, language integration, and European solar market strategy for SunTech GmbH (Werk Teisnach).
+        </p>
+      </div>
+
+      <!-- Team Members Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 mb-20">
+        
+        <!-- Member 1 -->
+        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200 text-center hover:border-amber-400 hover:shadow-lg transition-all space-y-3 group">
+          <div class="w-16 h-16 rounded-full bg-gradient-to-tr from-navy-900 to-blue-700 text-amber-400 text-2xl font-extrabold flex items-center justify-center mx-auto shadow-md group-hover:scale-110 transition-transform">
+            A
+          </div>
+          <h3 class="font-extrabold text-navy-900 text-lg">Amalia</h3>
+          <span class="inline-block px-2.5 py-0.5 bg-blue-100 text-blue-800 text-[11px] font-bold rounded-full">Strategic HR Lead</span>
+          <p class="text-xs text-slate-500 leading-normal">University partnerships (DIT) & international talent pipeline management.</p>
+        </div>
+
+        <!-- Member 2 -->
+        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200 text-center hover:border-amber-400 hover:shadow-lg transition-all space-y-3 group">
+          <div class="w-16 h-16 rounded-full bg-gradient-to-tr from-amber-500 to-solar-600 text-navy-900 text-2xl font-extrabold flex items-center justify-center mx-auto shadow-md group-hover:scale-110 transition-transform">
+            K
+          </div>
+          <h3 class="font-extrabold text-navy-900 text-lg">Karol</h3>
+          <span class="inline-block px-2.5 py-0.5 bg-amber-100 text-amber-900 text-[11px] font-bold rounded-full">Public Grants Lead</span>
+          <p class="text-xs text-slate-500 leading-normal">ESF+ & Arbeitsmarktfonds Bayern funding proposals and compliance.</p>
+        </div>
+
+        <!-- Member 3 -->
+        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200 text-center hover:border-amber-400 hover:shadow-lg transition-all space-y-3 group">
+          <div class="w-16 h-16 rounded-full bg-gradient-to-tr from-emerald-600 to-teal-700 text-white text-2xl font-extrabold flex items-center justify-center mx-auto shadow-md group-hover:scale-110 transition-transform">
+            K
+          </div>
+          <h3 class="font-extrabold text-navy-900 text-lg">Kate</h3>
+          <span class="inline-block px-2.5 py-0.5 bg-emerald-100 text-emerald-900 text-[11px] font-bold rounded-full">Mentorship Lead</span>
+          <p class="text-xs text-slate-500 leading-normal">Tandem Mentorship design & shop-floor bilingual work instructions.</p>
+        </div>
+
+        <!-- Member 4 -->
+        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200 text-center hover:border-amber-400 hover:shadow-lg transition-all space-y-3 group">
+          <div class="w-16 h-16 rounded-full bg-gradient-to-tr from-purple-700 to-indigo-800 text-white text-2xl font-extrabold flex items-center justify-center mx-auto shadow-md group-hover:scale-110 transition-transform">
+            M
+          </div>
+          <h3 class="font-extrabold text-navy-900 text-lg">Mario</h3>
+          <span class="inline-block px-2.5 py-0.5 bg-purple-100 text-purple-900 text-[11px] font-bold rounded-full">Solar Market Lead</span>
+          <p class="text-xs text-slate-500 leading-normal">EU solar inverter export strategy & financial roadmap modeling.</p>
+        </div>
+
+        <!-- Member 5 -->
+        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200 text-center hover:border-amber-400 hover:shadow-lg transition-all space-y-3 group">
+          <div class="w-16 h-16 rounded-full bg-gradient-to-tr from-sky-500 to-blue-600 text-white text-2xl font-extrabold flex items-center justify-center mx-auto shadow-md group-hover:scale-110 transition-transform">
+            O
+          </div>
+          <h3 class="font-extrabold text-navy-900 text-lg">Onja</h3>
+          <span class="inline-block px-2.5 py-0.5 bg-sky-100 text-sky-900 text-[11px] font-bold rounded-full">Employer Brand Lead</span>
+          <p class="text-xs text-slate-500 leading-normal">Integration support, family housing, and regional retention programs.</p>
+        </div>
+
+      </div>
+
+      <!-- Contact Form & Location Map Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center bg-slate-50 rounded-3xl p-8 lg:p-12 border border-slate-200">
+        
+        <!-- Contact Form Column -->
+        <div class="lg:col-span-7 space-y-6">
+          <div>
+            <h3 class="text-2xl font-extrabold text-navy-900">Connect with Team 1 & SunTech HR</h3>
+            <p class="text-slate-600 text-sm mt-1">
+              Interested in recruitment partnerships, EU solar distribution, or public grant alignment? Reach out directly to our integration team.
+            </p>
+          </div>
+
+          <form id="suntech-contact-form" class="space-y-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="contact-name" class="block text-xs font-bold text-navy-900 uppercase mb-1">Full Name</label>
+                <input type="text" id="contact-name" required placeholder="e.g. Dr. Thomas Weber" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-amber-500 focus:ring-2 focus:ring-amber-200 text-sm">
+              </div>
+              <div>
+                <label for="contact-email" class="block text-xs font-bold text-navy-900 uppercase mb-1">Email Address</label>
+                <input type="email" id="contact-email" required placeholder="t.weber@example.de" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-amber-500 focus:ring-2 focus:ring-amber-200 text-sm">
+              </div>
+            </div>
+
+            <div>
+              <label for="contact-inquiry" class="block text-xs font-bold text-navy-900 uppercase mb-1">Inquiry Type</label>
+              <select id="contact-inquiry" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-amber-500 focus:ring-2 focus:ring-amber-200 text-sm font-medium">
+                <option value="recruitment">International Engineering Candidate / University Student</option>
+                <option value="funding">Public Funding & Grant Agency (ESF+ / Bavaria)</option>
+                <option value="export">European Solar Inverter Export / Distribution</option>
+                <option value="academic">TH Deggendorf (DIT) Academic Partnership</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="contact-message" class="block text-xs font-bold text-navy-900 uppercase mb-1">Your Message</label>
+              <textarea id="contact-message" rows="4" required placeholder="Write your inquiry message here..." class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-amber-500 focus:ring-2 focus:ring-amber-200 text-sm"></textarea>
+            </div>
+
+            <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-solar-500 to-amber-600 hover:from-solar-600 hover:to-amber-700 text-navy-900 font-extrabold text-base shadow-lg shadow-amber-500/20 hover:shadow-amber-500/40 transition-all">
+              Send Message to Team 1
+            </button>
+          </form>
+
+          <!-- Toast Notification -->
+          <div id="contact-toast" class="hidden p-4 rounded-xl bg-emerald-600 text-white font-bold text-sm items-center gap-3">
+            <span>✅</span>
+            <span>Thank you! Your inquiry has been sent to Amalia, Karol, Kate, Mario, and Onja (Team 1).</span>
+          </div>
+
+        </div>
+
+        <!-- Plant Location & Contact Cards Column -->
+        <div class="lg:col-span-5 space-y-6">
+          
+          <div class="bg-navy-900 text-white rounded-2xl p-6 border border-slate-800 space-y-4 shadow-lg">
+            <span class="px-2.5 py-1 bg-solar-500 text-navy-900 text-xs font-bold rounded inline-block">Facility Location</span>
+            <h4 class="text-xl font-bold">SunTech GmbH (Werk Teisnach)</h4>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Industriestraße / High-Tech Campus Teisnach<br>
+              94244 Teisnach, Landkreis Regen<br>
+              Bavaria, Germany
+            </p>
+            <div class="border-t border-slate-800 pt-3 text-xs text-slate-400 space-y-1">
+              <div>📍 <strong>Region:</strong> Eastern Bavaria (Bayerischer Wald)</div>
+              <div>⚡ <strong>Focus:</strong> Solar Inverters & Green Energy Tech</div>
+              <div>🎓 <strong>Academic Hub:</strong> TH Deggendorf (DIT) Partner</div>
+            </div>
+          </div>
+
+          <div class="relative rounded-2xl overflow-hidden border border-slate-200 shadow-md">
+            <img src="assets/team.png" alt="Erasmus+ BIP Team 1 Collaboration" class="w-full h-48 object-cover">
+            <div class="absolute inset-0 bg-navy-950/40"></div>
+            <div class="absolute bottom-3 left-3 right-3 text-white text-xs font-semibold">
+              Erasmus+ BIP Team 1 Taskforce in Teisnach
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="bg-navy-950 text-slate-400 py-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row justify-between items-center gap-6 border-b border-slate-800 pb-8">
+        
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded-lg bg-solar-500 text-navy-900 font-extrabold flex items-center justify-center text-base">
+            ⚡
+          </div>
+          <div>
+            <span class="font-extrabold text-white text-base">SunTech GmbH | Werk Teisnach</span>
+            <span class="text-xs text-slate-500 block">International Talent & Solar Market Strategy</span>
+          </div>
+        </div>
+
+        <div class="text-xs text-center md:text-right text-slate-400">
+          <span class="font-bold text-amber-400 block mb-1">Erasmus+ BIP Team 1 Project Strategy</span>
+          Team Members: <strong>Amalia, Karol, Kate, Mario, Onja</strong> (HR & International Integration Department)
+        </div>
+
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs">
+        <p>
+          Copyright © 2026 SunTech GmbH (Werk Teisnach). All rights reserved. Developed for Erasmus+ BIP Strategy.
+        </p>
+        <div class="flex items-center space-x-6">
+          <a href="#hero" class="hover:text-amber-400 transition-colors">Back to Top ↑</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Main Application Script -->
+  <script src="app.js"></script>
+</body>
+</html>
